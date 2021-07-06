@@ -38,6 +38,7 @@
         <header class="bg-gray-800" x-data="{ isOpen: false }">
             <nav class="container  px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
                 <div class="flex items-center justify-between">
+                    <img class="w-10 h-8" src="{{ asset('/img/prilik.png') }}">
                     <a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400"
                         href="#">Prilika</a>
 
@@ -63,7 +64,11 @@
                     @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
-                        <a href="{{ url('/user/profile') }}" class="text-sm text-gray-700 underline">Mi cuenta</a>
+                        <a href="{{ url('/user/profile') }}" class="text-sm text-gray-200 underline">Mi cuenta</a>
+                        <a href="{{ route('dashboard') }}" class="text-sm text-gray-200 underline">Dashboard</a>
+
+
+
                         </a>
                         @else
                         <a href="{{ route('login') }}"
@@ -146,7 +151,7 @@
 
 
         <!-- ++++++++++++++++++++ cards ++++++++++++++++++++ -->
-        <div>
+        <div class="bg-gray-900">
 
 
             {{-- <x-vacancy-card />  --}}

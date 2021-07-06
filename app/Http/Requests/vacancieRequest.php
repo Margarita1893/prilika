@@ -39,7 +39,7 @@ class vacancieRequest extends FormRequest
 
         // Si el usuario guarda como borrador, solo le obligará a llenar ciertos campos.
         // array_merge fusiona dos arrays
-        if ($this->status == 2) {
+        if ($this->status == 'publicar') {
             $rules = array_merge($rules, [
                 'category_id' => 'required',
                 'tecnologies' => 'required',

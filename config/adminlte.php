@@ -85,7 +85,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
 
@@ -248,12 +248,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'icon_color' => 'yellow',
         ],
-        [
-            'text' => 'developers',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-            'can' => 'developerpermi',
-        ],
+        // [
+        //     'text' => 'developers',
+        //     'url'  => 'admin/settings',
+        //     'icon' => 'fas fa-fw fa-lock',
+        //     'can' => 'developerpermi',
+        // ],
         [
 
             'text' => 'ver vacantes',
@@ -261,32 +261,34 @@ return [
             'icon' => 'fas fa-fw fa-clipboard-list',
             'can' => 'developerpermi',
         ],
+        ['header' => 'vacantes'],
         [
-
-            'text' => 'ver vacantes publicadas',
-            'url'  => 'admin/settings',
+            'text'       => 'Listado de vacantes',
             'icon' => 'fas fa-fw fa-eye',
-            'can' => 'recruiterpermi',
             'icon_color' => 'green',
-        ],
-        [
-
-            'text' => 'Crear Vacante',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-edit',
+            'route'        => 'admin.vacancies.index',
             'can' => 'recruiterpermi',
-            'icon_color' => 'primary',
+
+            
         ],
         [
-            'text' => 'tomar vacante',
-            'url'  => 'dashboard',
-            'icon' => 'fas fa-fw fa-handshake',
-            'can' => 'developerpermi',
+            'text'       => 'crear nueva vacante',
+            'icon' => 'fas fa-fw fa-edit',
+            'icon_color' => 'primary',
+            'route'        => 'admin.vacancies.create',
+            'can' => 'recruiterpermi',
 
-            'text' => 'Publica una vacante',
-            'route'  => 'admin.vacancies.index',
-            'icon' => 'fas fa-fw fa-lock',
-            'can' => 'developerpermi',
+        ],
+        [
+            // 'text' => 'tomar vacante',
+            // 'url'  => 'dashboard',
+            // 'icon' => 'fas fa-fw fa-handshake',
+            // 'can' => 'developerpermi',
+
+            // 'text' => 'Publica una vacante',
+            // 'route'  => 'admin.vacancies.index',
+            // 'icon' => 'fas fa-fw fa-lock',
+            // 'can' => 'developerpermi',
             
         ],
         [
@@ -296,56 +298,8 @@ return [
             
             
         ],
-        [
-            'text'    => 'vacantes',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'vacantes'],
-        [
-            'text'       => 'Listado de vacantas',
-            'icon_color' => 'yellow',
-            'route'        => 'admin.vacancies.index',
-        ],
-        [
-            'text'       => 'crear nueva vacante',
-            'icon_color' => 'cyan',
-            'route'        => 'admin.vacancies.create',
-
-        ],
+        
+    
        
        
     ],

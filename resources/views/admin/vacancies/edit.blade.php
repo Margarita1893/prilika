@@ -14,8 +14,9 @@
 @endif --}}
 
 <div class="card">
-    <div class="card-body">
-        {!! Form::model($vacancy,['route' => ['admin.vacancies.update', $vacancy], 'autocomplete' => 'off', 'method' => 'put']) !!}
+    <div class="card-body ">
+        {!! Form::model($vacancy,['route' => ['admin.vacancies.update', $vacancy], 'autocomplete' => 'off', 'method' =>
+        'put']) !!}
         <!-- con model y la variable vancacy hago que se cargue la infrmación de la vacante para poderla editar -->
 
         @include('admin.vacancies.partials.form')
@@ -33,6 +34,6 @@
 
 @section('js')
 <script>
-    console.log('Hi!');
+console.log('Hi!');
 </script>
 @stop

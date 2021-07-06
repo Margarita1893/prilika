@@ -25,8 +25,12 @@
 @section('content')
 
 @if (Auth::user()->hasRole('Developers'))
-<h1>desarrollador</h1>
+<h3 class="bg-green rounded-lg w-28">Desarrollador</h3>
+<div class="mb-3 bg-gray-700 rounded-lg">
+    <livewire:vacancies-list>
 
+        <a class="btn btn-primary" href="{{url('/vacancies/create')}}" role="button">Aplicar</a>
+</div>
 
 {{--<livewire:vacancie-list> --}}
 @elseif (Auth::user()->hasRole('Recruiter'))
